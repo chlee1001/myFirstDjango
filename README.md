@@ -23,6 +23,7 @@
 - 커맨드 창에 Spring initializr입력
 - Maven - Java - group id(com.example) - Artifact Id(프로젝트명) - Spring Boot version
 - Dependency (Spring Boot DevTools, Spring Web)
+  - mustache(for MVC)
 - 실행 명령어 (.\mvnw spring-boot:run)
 - http://localhost:8080
 
