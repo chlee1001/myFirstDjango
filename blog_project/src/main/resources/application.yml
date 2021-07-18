@@ -22,7 +22,7 @@ spring:
   jpa:
     open-in-view: true
     hibernate:
-      ddl-auto: create # 프로젝트를 실행할 때마다 새로 만든다. // update, none // 최초에만 create
+      ddl-auto: update # 프로젝트를 실행할 때마다 새로 만든다. // update, none // 최초에만 create
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       use-new-id-generator-mappings: false # JPA의 기본 넘버링 전략을 따라가지 않고, 프로젝트에서 연결된 DB의 넘버링 전략을 따라간다.
