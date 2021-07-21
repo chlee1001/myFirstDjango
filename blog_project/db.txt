@@ -1,0 +1,31 @@
+-- 유저이름@아이피주소
+create user 'chaehyeon'@'%' identified by 'dl7164';
+-- ON DB이름.테이블명
+-- TO 유저이름@아이피주소
+GRANT ALL PRIVILEGES ON *.* TO 'chaehyeon'@'%';
+CREATE DATABASE blog CHARACTER SET utf8 DEFAULT COLLATE utf8_general_ci;
+use blog;
+
+
+[client]
+default-character-set=utf8
+
+[mysql]
+default-character-set=utf8
+
+[mysqld]
+collation-server = utf8_unicode_ci
+init-connect='SET NAMES utf8'
+init_connect='SET collation_connection = utf8_general_ci'
+character-set-server=utf8
+
+
+show variables like 'c%';
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?serverTimezone=Asia/Seoul
+    username: chaehyeon
+    password: dl7164
