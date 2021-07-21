@@ -4,6 +4,7 @@ import com.chaehyeon.blog_project.model.RoleType;
 import com.chaehyeon.blog_project.model.User;
 import com.chaehyeon.blog_project.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -21,6 +22,22 @@ public class DummyControllerTest {
     @Autowired // 의존성주입(DI)
     private UserRepository userRepository;
 
+
+    @DeleteMapping("/dummy/user/{id}")
+    public String delete(@PathVariable int id) {
+        try {
+            userRepository.deleteById(id);
+        } catch (EmptyResultDataAccessException e) {
+            return "삭제에 실패하였습니다. 해당 id는 DB에 없습니다.";
+        }
+        return "삭제되었습니다. id: " + id;
+    }
+
+
+    // save함수는 id를 전달하지 않으면 insert를 해주고,
+    // save함수는 id를 전달하면 해당 id에 대한 데이터가 있으면 update를 해주고
+    // save함수는 id를 전달하면 해당 id에 대한 데이터가 없으면 insert를 한다.
+
     // email, password
     @Transactional // 함수 종료 시 자동 commit됨
     @PutMapping("/dummy/user/{id}")
@@ -32,9 +49,9 @@ public class DummyControllerTest {
         user.setPassword(requestUser.getPassword());
         user.setEmail(requestUser.getEmail());
 
-        return null;
+        // 더티체킹
+        return user;
     }
-
 
     // http://localhost:8000/blog/dummy/users
     @GetMapping("/dummy/users")
