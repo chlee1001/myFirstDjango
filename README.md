@@ -1,11 +1,40 @@
 # myFirstSpringBoot
-### 스프링부트 개념 배우기
 
-[[Spring Boot] IntelliJ로 Spring Boot 시작하기](https://chlee1001.github.io/2021/06/23/SPRINGBOOT-1-21-06-23/)
+스프링부트 배우기 위한 저장소 (21.06)
 
-[[Spring Boot] Springboot With JPA 개념잡기](https://chlee1001.github.io/2021/06/29/SPRINGBOOT-Study1-21-06-29/) 개념부터 공부시작!
+## 스프링부트 개념 학습
 
-### Blog Project로 연습하기
+[[Spring Boot] IntelliJ로 Spring Boot 시작하기](https://chlee1001.github.io/2021/06/23/SPRINGBOOT-IntelliJ-21-06-23/)
+
+[[블로그]](https://chlee1001.github.io/categories/Programming/Spring-Boot/) 배운 것 업로드
+
+---
+
+## Blog Project로 연습하기 (21.07~)
+
+- blog_project 
+
+---
+
+## Fintech Pre 인턴십 2기 교육 (21.07.31)
+
+- fintech (프로젝트 생성예정)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
